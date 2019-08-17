@@ -16,7 +16,7 @@
 
     <groupId>com.pro-crafting.tools</groupId>
     <artifactId>github-jwt-integration</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <scm>
@@ -37,7 +37,7 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
         <!-- Dependency Versions -->
-        <version.quarkus>0.15.0</version.quarkus>
+        <version.quarkus>0.21.1</version.quarkus>
         <!-- Update this version when updating quarkus -->
         <version.jackson>2.9.8</version.jackson>
         <version.resteasy>4.0.0.Final</version.resteasy>
@@ -45,6 +45,8 @@
         <version.swagger-annotations>1.5.18</version.swagger-annotations>
         <version.commons-io>2.6</version.commons-io>
         <version.guava>25.0-jre</version.guava>
+        <version.githubapi>2.1.5</version.githubapi>
+        <version.java-jwt>3.8.1</version.java-jwt>
 
         <!-- Plugin Versions -->
         <version.docker-maven-plugin>0.30.0</version.docker-maven-plugin>
@@ -136,6 +138,13 @@
                     <artifactId>docker-maven-plugin</artifactId>
                     <version>${version.docker-maven-plugin}</version>
                     <executions>
+                        <execution>
+                            <id>build</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
                         <execution>
                             <id>push</id>
                             <phase>deploy</phase>
