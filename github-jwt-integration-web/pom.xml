@@ -114,7 +114,6 @@
                         <groupId>io.fabric8</groupId>
                         <artifactId>docker-maven-plugin</artifactId>
                         <configuration>
-                            <imagePullPolicy>always</imagePullPolicy>
                             <images>
                                 <image>
                                     <name>${docker.repository}/${project.artifactId}</name>
@@ -133,6 +132,7 @@
                                         </wait>
                                     </run>
                                     <build>
+                                        <imagePullPolicy>always</imagePullPolicy>
                                         <dockerFileDir>${project.basedir}/src/main/docker</dockerFileDir>
                                         <assembly>
                                             <basedir>/</basedir>
