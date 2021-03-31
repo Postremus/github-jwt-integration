@@ -44,7 +44,7 @@
 
         <version.swagger-annotations>1.5.18</version.swagger-annotations>
         <version.commons-io>2.6</version.commons-io>
-        <version.guava>25.0-jre</version.guava>
+        <version.guava>29.0-jre</version.guava>
         <version.githubapi>2.1.5</version.githubapi>
         <version.java-jwt>3.8.1</version.java-jwt>
 
